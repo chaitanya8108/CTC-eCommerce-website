@@ -8,7 +8,7 @@ const Shop = () => {
     useEffect(() => {
         const fetchProducts = async () => {
     try {
-        const response = await fetch("http://localhost:5002/api/products");
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/products`);
 
         if (!response.ok) {
             console.error("Error status:", response.status);
